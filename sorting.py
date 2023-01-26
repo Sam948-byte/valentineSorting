@@ -17,10 +17,14 @@ for x in data:
     answersFile.close()
     for y in data:
         match = 0
+        if y == x:
+            break
         compAnswersFile = open('results/' + y.strip() + '.txt', 'r')
         compAnswers = compAnswersFile.readlines()
         compAnswersFile.close()
         for z in answers:
+            #print(z.strip())
+            #print(compAnswers[answers.index(z)].strip())
             if z.strip() != compAnswers[answers.index(z)].strip():
                 continue
             match += 1
