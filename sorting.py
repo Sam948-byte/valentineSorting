@@ -28,7 +28,7 @@ for x in data:
             #print(compAnswers[answers.index(z)].strip())
             if z.strip() == compAnswers[iteration].strip():
                 match += 1
-        print(x.strip() + ' has a ' + str(match / numQuestions * 100) + ' percent compatability with ' + y.strip())
+        print(x.strip() + ' has a ' + str(int(match / numQuestions * 100)) + ' percent compatability with ' + y.strip())
     
 
 #display content of text file
