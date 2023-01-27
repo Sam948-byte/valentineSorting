@@ -1,6 +1,3 @@
-#initial variables
-
-
 #define text file to open
 my_file = open('results/names.txt', 'r')
 
@@ -24,12 +21,6 @@ for x in data:
         compAnswers = compAnswersFile.readlines()
         compAnswersFile.close()
         for iteration, z in enumerate(answers, start=0):
-            #print(z.strip())
-            #print(compAnswers[answers.index(z)].strip())
             if z.strip() == compAnswers[iteration].strip():
                 match += 1
         print(x.strip() + ' has a ' + str(int(match / numQuestions * 100)) + ' percent compatability with ' + y.strip())
-    
-
-#display content of text file
-#print(data[0].strip())
