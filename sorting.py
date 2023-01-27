@@ -18,4 +18,4 @@ for x in names:
         for iteration, z in enumerate(answers, start=0):
             if z.strip() == compAnswers[iteration].strip():
                 match += 1
-        print(x.strip('.txt') + ' has a ' + str(round(match / numQuestions * 100, 2)) + ' percent compatability with ' + y.strip('.txt'))
+        print(x.strip('.txt') + ' has a ' + str(round(match / numQuestions * 100, 2)) + '% compatability with ' + y.strip('.txt'))
