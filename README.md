@@ -1,3 +1,3 @@
 # valentineSorting
 
-This is a sorting program designed to compare the results of two people from a questionnaire.  In order to use it, put all the names of the people into the ``names.txt`` file.  Then create a file with the same name as the person, and put their results in it, each answer on a new line, without any numbering or labeling.
+This is a sorting program designed to compare the results of two people from a questionnaire.  In order to use it, create a file labeled with the name of a person, i.e. ``John Smith.txt``, and put the person's results inside the file.  Put each separate answer on a new line, and ensure that there is no numbering or labeling, solely the answers.
