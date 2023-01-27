@@ -1,26 +1,30 @@
+#imports
+import os
+
 #define text file to open
-my_file = open('results/names.txt', 'r')
+#my_file = open('results/names.txt', 'r')
 
 #read text file into list 
-data = my_file.readlines()
+#names = my_file.readlines()
+names = os.listdir('results')
 
-my_file.close()
+#my_file.close()
 
-numNames = len(data)
+numNames = len(names)
 
-for x in data:
-    answersFile = open('results/' + x.strip() + '.txt', 'r')
+for x in names:
+    answersFile = open('results/' + x.strip(), 'r')
     answers = answersFile.readlines()
     answersFile.close()
     numQuestions = len(answers)
-    for y in data:
+    for y in names:
         match = 0
         if y == x:
             break
-        compAnswersFile = open('results/' + y.strip() + '.txt', 'r')
+        compAnswersFile = open('results/' + y.strip(), 'r')
         compAnswers = compAnswersFile.readlines()
         compAnswersFile.close()
         for iteration, z in enumerate(answers, start=0):
             if z.strip() == compAnswers[iteration].strip():
                 match += 1
-        print(x.strip() + ' has a ' + str(int(match / numQuestions * 100)) + ' percent compatability with ' + y.strip())
+        print(x.strip('.txt') + ' has a ' + str(int(match / numQuestions * 100)) + ' percent compatability with ' + y.strip('.txt'))
