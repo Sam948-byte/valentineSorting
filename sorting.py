@@ -22,12 +22,11 @@ for x in data:
         compAnswersFile = open('results/' + y.strip() + '.txt', 'r')
         compAnswers = compAnswersFile.readlines()
         compAnswersFile.close()
-        for z in answers:
+        for iteration, z in enumerate(answers, start=0):
             #print(z.strip())
             #print(compAnswers[answers.index(z)].strip())
-            if z.strip() != compAnswers[answers.index(z)].strip():
-                continue
-            match += 1
+            if z.strip() == compAnswers[iteration].strip() and (z.strip() == 'A' or z.strip() == 'B' or z.strip() == 'C' or z.strip() == 'D' or z.strip() == 'E'):
+                match += 1
         print(x.strip() + ' has a ' + str(match / numQuestions * 100) + ' percent compatability with ' + y.strip())
     
 
