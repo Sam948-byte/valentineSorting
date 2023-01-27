@@ -1,16 +1,7 @@
 #imports
 import os
 
-#define text file to open
-#my_file = open('results/names.txt', 'r')
-
-#read text file into list 
-#names = my_file.readlines()
 names = os.listdir('results')
-
-#my_file.close()
-
-numNames = len(names)
 
 for x in names:
     answersFile = open('results/' + x.strip(), 'r')
