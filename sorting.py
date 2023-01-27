@@ -4,7 +4,7 @@ import os
 names = os.listdir('answers')
 
 for x in names:
-    answersFile = open('results/' + x.strip(), 'r')
+    answersFile = open('answers/' + x.strip(), 'r')
     answers = answersFile.readlines()
     answersFile.close()
     numQuestions = len(answers)
@@ -12,7 +12,7 @@ for x in names:
         match = 0
         if y == x:
             break
-        compAnswersFile = open('results/' + y.strip(), 'r')
+        compAnswersFile = open('answers/' + y.strip(), 'r')
         compAnswers = compAnswersFile.readlines()
         compAnswersFile.close()
         for iteration, z in enumerate(answers, start=0):
