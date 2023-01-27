@@ -1,3 +1,3 @@
-Sam + Sofi = 2
-Sam + Fibi = 3
-Fibi + Sofi = 3
+Sam + Sofi = 2/15
+Sam + Fibi = 4/15
+Fibi + Sofi = 5/15
