@@ -1,7 +1,7 @@
 #imports
 import os
 
-names = os.listdir('results')
+names = os.listdir('answers')
 
 for x in names:
     answersFile = open('results/' + x.strip(), 'r')
