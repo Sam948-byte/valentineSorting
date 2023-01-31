@@ -4,7 +4,6 @@ import sys
 
 names = os.listdir('answers')
 
-
 answersFile = open('answers/' + sys.argv[1].strip() + '.txt', 'r')
 answers = answersFile.readlines()
 answersFile.close()
